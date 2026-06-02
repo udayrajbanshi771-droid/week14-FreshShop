@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Shop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+/* Navbar */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#4CAF50;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#444;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#4CAF50;
+}
+
+/* Hero */
+
+.hero{
+    background:#e8fff3;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#777;
+    font-size:20px;
+}
+
+/* Products */
+
+.products{
+    padding:70px 50px;
+}
+
+.products h2{
+    text-align:center;
+    font-size:45px;
+    color:#555;
+    margin-bottom:50px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+    text-align:center;
+}
+
+.card-body h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#4CAF50;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#388E3C;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🥗 Fresh Shop</div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#newsletter">Subscribe</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="cart">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Fresh Products for Your Daily Life</h1>
+    <p>Choose your favorite items from our fresh and healthy collection.</p>
+</section>
+
+<section class="products" id="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <span class="sale-badge">SALE</span>
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Fresh Apples</h3>
+                <p class="price">$5.99</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Banana Pack</h3>
+                <p class="price">$3.99</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="sale-badge">SALE</span>
+            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Fresh Tomatoes</h3>
+                <p class="price">$6.50</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Organic Potatoes</h3>
+                <p class="price">$7.20</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Fresh Milk</h3>
+                <p class="price">$2.99</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="sale-badge">SALE</span>
+            <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=600&q=80">
+            <div class="card-body">
+                <h3>Soft Bread</h3>
+                <p class="price">$3.50</p>
+                <button class="btn add-cart">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+    <h2>Subscribe For Weekly Offers</h2>
+    <p>Get discounts and special deals directly in your inbox.</p>
+
+    <div class="subscribe-box">
+        <input type="email" placeholder="Enter Your Email">
+        <button>Subscribe</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Fresh Shop | Freshness Delivered Daily</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
